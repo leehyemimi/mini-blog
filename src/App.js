@@ -1,9 +1,5 @@
 import React from "react";
-import {
-	BrowserRouter,
-	Routes,
-	Route
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 // Pages
 import MainPage from './component/page/MainPage';
@@ -18,7 +14,7 @@ const MainTitleText = styled.p`
 
 function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<MainTitleText>미니 블로그</MainTitleText>
 			<Routes>
 				<Route index element={<MainPage />} />
